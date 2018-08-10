@@ -25,25 +25,28 @@ padding-s() => padding .5em 1em 	// padding-{x} : s | m | l
 
 
 
-## Core
+## Type
 
-Essential Media Query setup.
+### Core
 
-### Type
-
-Basic font config
+Basic font config and sizes
 
 _rulesets_
 
 Single **margin-bottom** as spacing break for both `p` and `h` tags
 
+---
+
+### Styles
+
 _classes_
 
 ```
 .tx-{name} 							// weight | color | custom
+.tx-highlight--red
 ```
 
----
+------
 
 ### Fonts
 
@@ -62,7 +65,13 @@ fontace(_fontname)					// declares font availablillity
 fluid()								// [WIP] responsive fluid text
 ```
 
----
+------
+
+
+
+## Core
+
+Essential Media Query setup.
 
 ### Media
 
@@ -160,13 +169,11 @@ block
 
 ---
 
-## 
+
 
 ##Motion
 
 Reusable CSS **Animations** and Vue **Transitions** respectively
-
----
 
 
 
