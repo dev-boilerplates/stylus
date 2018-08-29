@@ -232,6 +232,16 @@ Modals | Headers | Navigation | Footer | Articles | Cards
 
 ... before they become neccessary as Components
 
+_includes_ Pure Parallax
+
+```
+elem.has-parallax			// set perspective
+  .parallax-viewport		// view window
+    .layer--fore			// 3d heirachy
+    .layer--base			
+	.layer--back
+```
+
 ---
 
 
