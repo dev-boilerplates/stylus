@@ -236,10 +236,11 @@ _includes_ Pure Parallax
 
 ```
 elem.has-parallax			// set perspective
-  .parallax-viewport		// view window
-    .layer--fore			// 3d heirachy
-    .layer--base			
-	.layer--back
+  .viewport-camera    // optional for camera control
+    .parallax-layer		// view window
+      .layer--fore		// 3d heirachy
+      .layer--base			
+	    .layer--back
 ```
 
 ---

@@ -1,10 +1,11 @@
 /**
  * Useage
  * .group.has-parallax
- *   .parallax-viewport
- *     .layer--fore
- *     .layer--base
- *     .layer--back
+ *   .viewport-camera(optional for 3d Control)
+ *     .parallax-layer
+ *       .layer--fore
+ *       .layer--base
+ *       .layer--back
  */
 .has-parallax
   height 100vh
@@ -13,13 +14,15 @@
   perspective 301px
   scroll-behaviour smooth
 
+.viewport-camera
+  transform-style preserve-3d
+  transform translate3d(0, 0, -800px) rotateY(20deg)
+
 .has-parallax
   [class^="parallax-viewport"]    
     height 100vh
     position relative        
-    transform-style preserve-3d    
-    transition all .3s
-    // transform translate3d(50%, 0, -800px) rotateY(30deg)
+    transform-style preserve-3d
   [class^="layer"]
     display flex
     align-items center
