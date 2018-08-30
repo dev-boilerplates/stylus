@@ -232,15 +232,25 @@ Modals | Headers | Navigation | Footer | Articles | Cards
 
 ... before they become neccessary as Components
 
-_includes_ Pure Parallax
+_includes_ **Parallax**
 
 ```
-elem.has-parallax			// set perspective
-  .viewport-camera    // optional for camera control
+// normal fullscreen
+
+.camera.has-parallax	// set perspective
+  .viewport-window    	// optional for camera control
     .parallax-layer		// view window
       .layer--fore		// 3d heirachy
       .layer--base			
-	    .layer--back
+	  .layer--back
+	  
+// alternative sandboxed camera
+
+.el-with-perspective
+  .viewport-window.has-parallax
+	.parallax-layer
+	
+-- camera is now contained fullscreen within its own window which can be transformed
 ```
 
 ---

@@ -1,7 +1,7 @@
 /**
  * Useage
- * .group.has-parallax
- *   .viewport-camera(optional for 3d Control)
+ * .camera.has-parallax
+ *   .viewport-window(optional for 3d Control)
  *     .parallax-layer
  *       .layer--fore
  *       .layer--base
@@ -11,17 +11,17 @@
   height 100vh
   overflow hidden
   overflow-y auto
-  perspective 301px
+  perspective 300px
   scroll-behaviour smooth
 
-.viewport-camera
+.viewport-window
   transform-style preserve-3d
   transition transform .4s ease-out
   &.has-debug
     transform translate3d(0, 0, -800px) rotateY(20deg)
 
 .has-parallax
-  [class^="parallax-viewport"]    
+  [class^="parallax-layer"]    
     height 100vh
     position relative        
     transform-style preserve-3d
@@ -35,7 +35,7 @@
 
 // requires z-index settings
 
-.parallax-viewport
+.parallax-layer
   &--1
     z-index 4
     background-color purple
@@ -47,7 +47,7 @@
 
 /**
  * Scale Factor
- * 1 + (translateZ * -1) / 1      => 2            || if translate is 
+ * 1 + (translateZ * -1) / 1      => 2            // if translate is - || if + then dont * -1 but 1 - at beginning
  * translateZ(-1px)               => scale(2)
  * font-size:                     => (2 * 100%)
  */
