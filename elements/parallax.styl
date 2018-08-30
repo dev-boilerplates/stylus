@@ -16,7 +16,9 @@
 
 .viewport-camera
   transform-style preserve-3d
-  transform translate3d(0, 0, -800px) rotateY(20deg)
+  transition transform .4s ease-out
+  &.has-debug
+    transform translate3d(0, 0, -800px) rotateY(20deg)
 
 .has-parallax
   [class^="parallax-viewport"]    
