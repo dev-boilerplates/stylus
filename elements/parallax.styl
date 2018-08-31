@@ -16,10 +16,10 @@ _perspective = 300px
 scaleFactor(Z)
   p = unit(_perspective, '')
   if Z > 0
-    n = ((p + Z) / p)
+    n = (p + Z) / p
     s = 1 - n + 1
   else
-    n = (Z / p)
+    n = Z / p
     s = (n - 1) * -1
   transform translateZ(unit(Z, 'px')) scale(s)
 
