@@ -40,4 +40,17 @@ cell(target)
   .cell
     &-target
       grid-area target
+/**
+* Hide element completely, but still keep access via the DOM
+**/ 
+
+.is-offscreen 
+  border 0
+  clip rect(0 0 0 0)
+  height 1px
+  margin -1px
+  overflow hidden
+  padding 0
+  position absolute
+  width 1px
 
