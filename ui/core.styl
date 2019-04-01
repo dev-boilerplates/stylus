@@ -5,9 +5,7 @@
  * a.ui.is-link describes what kind of major style to follow
  * .ui--underline delivers the animation type
  */
-a
-  text-decoration none
-
+ 
 [class^="ui"]
   cursor pointer
   text-decoration none
@@ -15,4 +13,8 @@ a
   width max-content    
   position relative
   user-select none
-  // overflow hidden
+  &.has-debounce
+    pointer-events none
+    &:hover
+      filter greyscale(1)
+  
