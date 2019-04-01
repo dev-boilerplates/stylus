@@ -3,54 +3,40 @@ class(name)
     { block }
 
 /**
- * CSS3 GRID --- example
- * grid-gap 2em
- * grid-template-columns auto 2fr minmax(auto, 10em)
- * grid-template-rows minmax(3rem, auto) 
- * grid-template-areas "meta view status"
- */
-
-.layout
-  &-flex
-    display flex
-    justify-content center
-    align-items center
-  &-flex-column
-    display flex
-    flex-direction column
-    justify-content center
-    align-items center
-  &-grid
-    display grid
-
-/**
  * SYNTAX
  * .layout-flex use .box
  * .layout-grid use .cell
  */
 
-/*
- * DEPRECATE?
-  cell(action) =>
-  .cell-action
-    grid-area action
+.layout
+  &-flex
+    flex()
+  &-flex-column
+    flex-column()
+  &-grid
+    display grid
+
+/**
+ * Layers
+ * Useful for SPA Layout
+ * 0 : background
+ * 1 : view
+ * 2 : hud (heads-up-display)
+ * 3 : foreground | modal
  */
 
-cell(target)
-  .cell
-    &-target
-      grid-area target
-/**
-* Hide element completely, but still keep access via the DOM
-**/ 
-
-.is-offscreen 
-  border 0
-  clip rect(0 0 0 0)
-  height 1px
-  margin -1px
+[class^="layer"]
+  position relative
+  width 100vw
+  height 100vh
   overflow hidden
-  padding 0
-  position absolute
-  width 1px
 
+.layer
+  &--hud
+    background inherit  
+  &--background
+    background inherit
+  &--foreground
+    background inherit
+  &--view
+    background inherit

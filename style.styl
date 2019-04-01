@@ -4,54 +4,40 @@ global-reset()
   box-sizing border-box
 
 /**
- * THEME
- * Variables
+ * Abstracts [ Theme, Variables, MediaQueries ]
  */
-@import 'theme/colors'
-@import 'theme/sizes'
-@import 'theme/globals'
+@import 'abstracts/_base'
 
 /**
  * CORE
- * Variables and essential media query setup
+ * Essential HTML & Media Query setup
  */
-@import 'common/mixins'
-@import 'type/fonts'
-@import 'type/core'
-@import 'type/styles'
-@import 'core/media'
-@import 'core/html'
-@import 'core/inputs'
-@import 'core/layers'
-@import 'core/page'
+@import 'core/_base'
 
 /**
- * COMMON
- * Resources to setup behaviours and rules
- */
-@import 'common/icons'
-@import 'common/layouts'
-@import 'motion/transition'
-@import 'motion/animation'
+* Mixins
+**/
+@import 'mixins/_base'
 
 /**
- * INTERACTIVES
- */
-@import 'ui/core'
-@import 'ui/behaviour'
-@import 'ui/types'
-/**
- * ELEMENTS
- * Barebone application wrappers
- */
-@import 'elements/forms'
-@import 'elements/header'
-@import 'elements/footer'
-@import 'elements/figure'
-@import 'elements/parallax'
+ * COMMON Stylying
+**/
+@import 'common/_base'
 
 /**
- * COMPONENTS
+* Motion Styling
+**/
+@import 'motion/_base'
+
+/**
+* Elements [header, footer, forms, modal, card]
+**/ 
+@import 'elements/_base'
+
+/**
+ * INTERACTIVES & Links
  */
-@import 'components/state'
+@import 'ui/_base'
+
+
 

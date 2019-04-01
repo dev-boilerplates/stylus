@@ -5,23 +5,26 @@
  */
 
 p
-  font-family _paragraph
+  font-family $font-paragraph
   font-size 1em
-  margin-bottom _mBottom
+  margin-bottom 1em
   line-height 140%
   letter-spacing .025em
+  &:last-child
+    margin-bottom 0
+
 span
-  font-family _paragraph
+  font-family $font-default
   line-height normal
 
 blockquote 
   border-left .25em solid black
-  padding _padding
+  padding 1em 2em
   padding-left 4em
-  font-family _header
+  font-family $font-header
 
 h1,h2,h3,h4,h5,h6
-  font-family _header
+  font-family $font-header
   margin-bottom 1.75rem
   font-weight inherit
   line-height 1.35em
