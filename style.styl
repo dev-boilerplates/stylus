@@ -2,42 +2,44 @@
 global-reset()
 *, *:before, *:after
   box-sizing border-box
-
 /**
  * Abstracts [ Theme, Variables, MediaQueries ]
  */
-@import 'abstracts/_base'
+@import 'lib/abstracts'
 
 /**
  * CORE
  * Essential HTML & Media Query setup
  */
-@import 'core/_base'
+@import 'html'
+@import 'lib/core'
 
 /**
 * Mixins
 **/
-@import 'mixins/_base'
+// @import 'mixins'
 
 /**
  * COMMON Stylying
 **/
-@import 'common/_base'
+@import 'lib/common'
 
 /**
 * Motion Styling
 **/
-@import 'motion/_base'
+@import 'lib/motion'
 
 /**
 * Elements [header, footer, forms, modal, card]
 **/ 
-@import 'elements/_base'
+// @import 'lib/elements'
 
 /**
  * INTERACTIVES & Links
  */
-@import 'ui/_base'
+@import 'lib/ui'
 
-
-
+/**
+ * Components
+ **/
+ 
